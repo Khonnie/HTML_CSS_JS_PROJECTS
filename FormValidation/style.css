@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(245, 243, 240);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 100%;
+    max-width: 400px; */
+    padding: 1.8rem;
+    gap: 10PX;
+    border-radius: 5px;
+
+}
+#validationForm{
+    background-color:rgb(248, 246, 246);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    
+
+}
+input{
+    padding:6px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid rgb(221, 218, 218);
+    outline: none;
+    
+}
+input:focus{
+    border: 2px solid rgb(203, 248, 203)
+}
+/* input:hover{
+    border: 2px solid rgb(210, 245, 210);
+}
+input:active{
+    border: 2px solid rgb(241, 189, 189);
+} */
+label{
+    font-weight: bold;
+}
+#reg-btn{
+    background-color: rgb(15, 181, 236);
+    font-weight: bold;
+    color: white;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid rgb(15, 181, 236);
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px gray;
+
+}
+#reg-btn:hover{
+    background-color: rgb(12, 137, 179);
+    
+}
