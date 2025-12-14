@@ -15,38 +15,59 @@ const confirmpasswordspan = document.getElementById('confirmpasswordError');
 const regbutton = document.getElementById('reg-btn');
 
 
-function formvalidation(){
-    usernamevalue = usernameinput.value.trim();
-    emailvalue = emailinput.value.trim();
-    passwordvalue = passwordinput.value.trim();
+function formvalidation() {
+    const usernamevalue = usernameinput.value.trim();
+    const emailvalue = emailinput.value.trim();
+    const passwordvalue = passwordinput.value.trim();
+    const confirmpasswordvalue = confirmpasswordinput.value.trim();
 
-    if (usernamevalue.length === 0 || emailvalue.length === 0 || passwordvalue.length === 0 || confirmpasswordinput.value.trim().length === 0) { 
-        usernamespan.classList.add('visible');
+    // USERNAME
+    if (usernamevalue.length === 0) {
         usernamespan.textContent = "Username is required";
+        usernamespan.classList.add('visible');
         usernameinput.classList.add('invalid');
-
-        emailspan.classList.add('visible');
-        emailspan.textContent = "Email is required";
-        emailinput.classList.add('invalid');
-
-        passwordspan.classList.add('visible');
-        passwordspan.textContent = "Password is required";
-        passwordinput.classList.add('invalid');
-
-        confirmpasswordspan.classList.add('visible');
-        confirmpasswordspan.textContent = "Confirm Password is required";
-        confirmpasswordinput.classList.add('invalid');
-
-        return
-    }
-    
+        
+    } else {
         usernamespan.classList.remove('visible');
         usernameinput.classList.remove('invalid');
+    }
 
-        usernamevalue = "";
+    // EMAIL
+    if (emailvalue.length === 0) {
+        emailspan.textContent = "Email is required";
+        emailspan.classList.add('visible');
+        emailinput.classList.add('invalid');
+        
+    } else {
+        emailspan.classList.remove('visible');
+        emailinput.classList.remove('invalid');
+    }
+
+    // PASSWORD
+    if (passwordvalue.length === 0) {
+        passwordspan.textContent = "Password is required";
+        passwordspan.classList.add('visible');
+        passwordinput.classList.add('invalid');
+        
+    } else {
+        passwordspan.classList.remove('visible');
+        passwordinput.classList.remove('invalid');
+    }
+
+    // CONFIRM PASSWORD
+    if (confirmpasswordvalue.length === 0) {
+        confirmpasswordspan.textContent = "Confirm Password is required";
+        confirmpasswordspan.classList.add('visible');
+        confirmpasswordinput.classList.add('invalid');
+        
+    } else {
+        confirmpasswordspan.classList.remove('visible');
+        confirmpasswordinput.classList.remove('invalid');
+    }
+
 }
-regbutton.addEventListener('submit', formvalidation);
+
 form.addEventListener('submit', function (e) {
-    e.preventDefault(); // STOP page refresh
+    e.preventDefault();
     formvalidation();
 });
