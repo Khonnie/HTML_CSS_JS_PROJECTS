@@ -72,10 +72,12 @@ label{
     cursor: pointer;
     font-size: 15px;
     box-shadow: 2px 2px 5px gray;
+    margin-top: 5px;
 
 }
 #reg-btn:hover{
     background-color: rgb(12, 137, 179);
+    
 }
 .error-message{
     display: none;
@@ -90,4 +92,7 @@ label{
 .invalid{
     border: 2px solid red;
 
+}
+.valid{
+    border: 2px solid green;
 }
